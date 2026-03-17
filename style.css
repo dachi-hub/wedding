@@ -1,0 +1,308 @@
+:root { --line-color: #ccc; --dot-color: #333; }
+
+body{
+    background-attachment: fixed;
+    background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 650;
+    font-style: normal;
+    height: 100%;
+    gap: 50px;
+
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    border-left: 5px solid #000;
+    border-right: 5px solid #000;
+}
+.bottom-content,
+.top-content,
+.middle-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.calendar {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.calendar th {
+    font-weight: 650;
+    padding: 10px;
+    color: #333;
+}
+
+.calendar td {
+    padding: 15px;
+    font-size: 20px;
+    position: relative;
+}
+
+.middle-content span{
+    font-size: 40px;
+}
+
+/* Стилизация сердечка */
+.heart-day::after {
+    width: 50px;
+    height: 40px;
+    content: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'%3E%3C/path%3E%3C/svg%3E");
+    position: absolute;
+    font-size: 26px;
+    bottom: 10px;
+    right: 5px;
+    transform: rotate(-15deg);
+}
+
+/*Отсчет времени*/
+.countdown {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    gap: 20px;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time-block span {
+    font-size: 48px;
+    font-weight: bold;
+    display: block;
+}
+
+.time-block p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.separator {
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+/* Контейнер секции */
+.timeline {
+    width: 100%; /* Растягиваем на всю ширину .middle-content */
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden; /* Чтобы не было горизонтального скролла при вылете элементов */
+}
+
+/* Сам список */
+.timeline ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; /* Обязательно 100% */
+}
+
+/* Линия — теперь она будет ровно по центру .middle-content */
+.timeline ul::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #000; /* Цвет как у границ wrapper */
+    transform: translateX(-50%);
+}
+
+.timeline li {
+    position: relative;
+    width: 50%; /* Ровно половина */
+    padding: 20px 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* Левая сторона (нечетные) */
+.timeline li:nth-child(odd) {
+    left: 0;
+    text-align: right;
+    transform: translateX(-60px); /* Вылет слева */
+}
+
+/* Правая сторона (четные) */
+.timeline li:nth-child(even) {
+    left: 50%;
+    text-align: left;
+    transform: translateX(60px); /* Вылет справа */
+}
+
+/* Точки */
+.timeline li::after {
+    content: '';
+    position: absolute;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border: 2px solid #fff; /* Чтобы точка выделялась на линии */
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.timeline li:nth-child(odd)::after { right: -8px; }
+.timeline li:nth-child(even)::after { left: -8px; }
+
+/* Состояние появления */
+.timeline li.visible {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+
+/* Адаптив для телефонов */
+@media (max-width: 768px) {
+    .timeline ul::before { left: 20px; }
+    .timeline li {
+        width: 100% !important;
+        left: 0 !important;
+        text-align: left !important;
+        padding-left: 50px;
+        transform: translateX(40px) !important;
+    }
+    .timeline li:nth-child(odd)::after,
+    .timeline li:nth-child(even)::after {
+        left: 13px !important;
+    }
+}
+
+.map-link {
+    text-decoration: none;
+    display: inline-block;
+    color: #000;
+    border: 1px solid #000;
+    padding: 15px 60px;
+    font-size: 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.map-link:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+
+footer{
+    padding-top: 50px
+}
+
+.bottom-wrapper{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 15px;
+}
+
+.bottom-content>h2{
+    font-size: 50px;
+}
+
+/*event*/
+.event-form {
+    max-width: 400px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.underline-input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 10px 0;
+    outline: none;
+    background: transparent;
+}
+
+.option {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #000;
+    margin-right: 10px;
+}
+
+.submit-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    width: 100%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.submit-btn:hover {
+    opacity: 0.8;
+}
+
+.spinner {
+    display: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+
+    /* Важно для span: */
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.submit-button.btn-loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-loading .btn-text {
+    display: none;
+}
+
+.btn-loading .spinner {
+    display: inline-block;
+}
+
+
+.event-form.form-disabled {
+    pointer-events: none;
+    filter: grayscale(0.5);
+}
+
+/*...........*/
+h1 { margin-bottom: 5px; font-size: 35px }
+h3{font-size: 25px}
+p{font-size: 20px}
+img { max-width: 100%; height: auto; }

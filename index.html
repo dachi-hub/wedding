@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+
+            <div class="top-content">
+                <h1>Карина и Данила</h1>
+                <h2>19.06.2026</h2>
+                <img src="" alt="">
+            </div>
+    </header>
+    <main>
+        <div class="middle-content">
+            <p>Два сердца — одна история, которая только начинается…</p>
+            <img src="_-9_.png.webp" alt="img">
+            <h3>ДОРОГИЕ ГОСТИ!</h3>
+            <p>
+                Мы нашли друг друга, и теперь наши сердца бьются в унисон.
+                Скоро случится чудо — день, когда мы создадим свою маленькую вселенную под названием Семья.
+                Нам очень хочется, чтобы в этот день вы были рядом и согревали нас теплом своих сердец.
+                Приходите разделить с нами счастье и вдохнуть аромат нашей любви!
+            </p>
+            <h3>ИЮНЬ 2026</h3>
+            <div class="calendar-container">
+                <table class="calendar">
+                    <thead>
+                    <tr>
+                        <th>пн</th><th>вт</th><th>ср</th><th>чт</th><th>пт</th><th>сб</th><th>вс</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td><td>16</td><td>17</td><td>18</td>
+                        <td class="heart-day">19</td>
+                        <td>20</td><td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
+                    </tr>
+                    <tr>
+                        <td>29</td><td>30</td><td></td><td></td><td></td><td></td><td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Мы скажем<br/><span>Да</span> через...</p>
+            <div class="countdown">
+                    <div class="time-block">
+                        <span id="days">00</span>
+                    <p>ДНЕЙ</p>
+                    </div>
+                    <div class="separator">:</div>
+                        <div class="time-block">
+                        <span id="hours">00</span>
+                        <p>ЧАСОВ</p>
+                    </div>
+                    <div class="separator">:</div>
+                    <div class="time-block">
+                    <span id="minutes">00</span>
+                    <p>МИНУТ</p>
+                </div>
+                <div class="separator">:</div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <p>СЕКУНД</p>
+                </div>
+                </div>
+            <section class="timeline">
+                <ul>
+                    <li><div class="reveal"><p>11:30<br/>Сбор гостей</p></div></li>
+                    <li><div class="reveal"><p>12:00<br/>Регистрация</p></div></li>
+                    <li><div class="reveal"><p>13:00<br/>Фотосессия</p></div></li>
+                    <li><div class="reveal"><p>15:00<br/>Банкет</p></div></li>
+                    <li><div class="reveal"><p>23:00<br/>Финал</p></div></li>
+                </ul>
+            </section>
+            <div class="link">
+                <h3>Локация</h3>
+                <p>
+                    Ресторан «The Refectory»,<br/>
+                    Максима Богдановича, 2к3
+                </p>
+                <a href="https://yandex.by/maps/org/the_refectory/202116390716/?ll=27.557759%2C53.907894&z=18.39"
+                   class="map-link"
+                   target="_blank">Карта &rarr;</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="bottom-content">
+            <h2>
+                Заполните анкету гостя!
+            </h2>
+            <div class="bottom-wrapper">
+                    <form class="event-form">
+                        <div class="form-group">
+                            <label>Ваше имя и фамилия</label>
+                            <input type="text" name="Имя" placeholder="Имя и фамилия" class="underline-input">
+                        </div>
+                        <div class="form-group">
+                            <p>Сможете ли вы присутствовать?</p>
+                            <label class="option"><input type="radio" name="Присутствие" value="Да"> Да</label>
+                            <label class="option"><input type="radio" name="Присутствие" value="Нет"> Нет</label>
+                            <label class="option"><input type="radio" name="Присутствие" value="Сообщу позже"> Сообщу позже</label>
+                        </div>
+                        <div class="form-group">
+                            <p>Предпочтения по напиткам</p>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Шампанское"> Шампанское</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Вино-бел."> Белое вино</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Вино-кр."> Красное вино</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Мартини"> Мартини</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Коньяк"> Коньяк</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Виски"> Виски</label>
+                            <label class="option"><input type="checkbox" name="Напитки" value="Водки"> Водка</label>
+                        </div>
+                        <div class="form-group">
+                            <p>Какие у Вас предпочтения в еде?</p>
+                            <label class="option"><input type="checkbox" name="Еда" value="Курица">Курица</label>
+                            <label class="option"><input type="checkbox" name="Еда" value="Свинина">Свинина</label>
+                            <label class="option"><input type="checkbox" name="Еда" value="Рыба">Рыба</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Отправить</span>
+                            <span class="spinner"></span>
+                        </button>
+                    </form>
+                </div>
+        </div>
+    </footer>
+</div>
+<script src="googleScript.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
