@@ -292,6 +292,8 @@ img { max-width: 100%; height: auto; }
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
     body {
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-top: env(safe-area-inset-top);
         background: none!important;
     }
 
