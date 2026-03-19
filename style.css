@@ -10,7 +10,6 @@ body{
     font-style: normal;
     height: 100%;
     gap: 50px;
-
 }
 
 .wrapper{
@@ -292,6 +291,9 @@ img { max-width: 100%; height: auto; }
 
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
+    body {
+        background-attachment: fixed;
+    }
     .wrapper{
         border: none;
     }
