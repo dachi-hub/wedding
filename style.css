@@ -292,18 +292,19 @@ img { max-width: 100%; height: auto; }
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
     body {
-        background: none;
+        background: none!important;
     }
 
     body::before {
         content: "";
         position: fixed;
         top: 0;
+        right: 0;
+        bottom: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
         z-index: -1;
         background-image: url('https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png');
+        background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         will-change: transform;
