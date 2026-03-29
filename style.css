@@ -29,6 +29,11 @@ body{
     gap: 10px;
 }
 
+.top-content img{
+    width: 600px;
+    border: 2px solid #000000;
+}
+
 .calendar {
     border-collapse: collapse;
     text-align: center;
