@@ -311,18 +311,32 @@ img { max-width: 100%; height: auto; }
         right: 0;
         bottom: 0;
         left: 0;
-        /*z-index: -1;*/
+        z-index: -1;
         background-image: url('https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
         will-change: transform;
     }
+
+    .fake-status-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: env(safe-area-inset-top);
+        z-index: 9999;
+        background: rgba(11, 12, 16, 0.5);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        pointer-events: none;
+    }
+
     .wrapper{
         border: none;
     }
     .countdown {
-       /*span{font-size: 35px}*/
+       span{font-size: 35px}
     }
     .bottom-wrapper{
         margin: 20px;
