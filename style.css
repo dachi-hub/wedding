@@ -293,7 +293,6 @@ img { max-width: 100%; height: auto; }
         max-width: 100%;
         overflow-x: hidden;
         overscroll-behavior-x: none;
-        /*background-color: #d8d8d8 !important;*/
     }
 
     body{
@@ -303,11 +302,39 @@ img { max-width: 100%; height: auto; }
         background-position: center;
         background-attachment: scroll;
         z-index: -1;
+        background-color: #cdced1 !important;
     }
 
     .wrapper{
         border: none;
     }
+
+    .calendar-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 5px;
+        box-sizing: border-box;
+    }
+
+    .calendar {
+        width: 100%;
+        max-width: 365px;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    .calendar th {
+        padding: 8px 0;
+        font-size: 14px;
+        color: #666;
+    }
+
+    .calendar td {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
     .countdown {
        span{font-size: 35px}
     }
