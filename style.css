@@ -305,19 +305,6 @@ img { max-width: 100%; height: auto; }
         z-index: -1;
     }
 
-    .fake-status-bar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 9999;
-        height: env(safe-area-inset-top);
-        background: rgba(11, 12, 16, 0.5);
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-        pointer-events: none;
-    }
-
     .wrapper{
         border: none;
     }
