@@ -1,7 +1,6 @@
 :root { --line-color: #ccc; --dot-color: #333; }
 
 body{
-    background-color: #cdced1 !important;
     background-attachment: fixed;
     background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
     background-repeat: no-repeat;
@@ -56,7 +55,6 @@ body{
     font-size: 40px;
 }
 
-/* Стилизация сердечка */
 .heart-day::after {
     width: 50px;
     height: 40px;
@@ -98,24 +96,21 @@ body{
     padding-bottom: 25px;
 }
 
-/* Контейнер секции */
 .timeline {
-    width: 100%; /* Растягиваем на всю ширину .middle-content */
+    width: 100%;
     margin-top: 40px;
     position: relative;
-    overflow: hidden; /* Чтобы не было горизонтального скролла при вылете элементов */
+    overflow: hidden;
 }
 
-/* Сам список */
 .timeline ul {
     position: relative;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%; /* Обязательно 100% */
+    width: 100%;
 }
 
-/* Линия — теперь она будет ровно по центру .middle-content */
 .timeline ul::before {
     content: '';
     position: absolute;
@@ -123,34 +118,31 @@ body{
     top: 0;
     width: 2px;
     height: 100%;
-    background: #000; /* Цвет как у границ wrapper */
+    background: #000;
     transform: translateX(-50%);
 }
 
 .timeline li {
     position: relative;
-    width: 50%; /* Ровно половина */
+    width: 50%;
     padding: 20px 40px;
     box-sizing: border-box;
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
-/* Левая сторона (нечетные) */
 .timeline li:nth-child(odd) {
     left: 0;
     text-align: right;
-    transform: translateX(-60px); /* Вылет слева */
+    transform: translateX(-60px);
 }
 
-/* Правая сторона (четные) */
 .timeline li:nth-child(even) {
     left: 50%;
     text-align: left;
-    transform: translateX(60px); /* Вылет справа */
+    transform: translateX(60px);
 }
 
-/* Точки */
 .timeline li::after {
     content: '';
     position: absolute;
@@ -158,7 +150,7 @@ body{
     width: 12px;
     height: 12px;
     background: #000;
-    border: 2px solid #fff; /* Чтобы точка выделялась на линии */
+    border: 2px solid #fff;
     border-radius: 50%;
     z-index: 5;
 }
@@ -310,6 +302,7 @@ img { max-width: 100%; height: auto; }
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
+        z-index: -1;
     }
 
     .fake-status-bar {
@@ -317,8 +310,8 @@ img { max-width: 100%; height: auto; }
         top: 0;
         left: 0;
         right: 0;
-        height: env(safe-area-inset-top);
         z-index: 9999;
+        height: env(safe-area-inset-top);
         background: rgba(11, 12, 16, 0.5);
         -webkit-backdrop-filter: blur(15px);
         backdrop-filter: blur(15px);
