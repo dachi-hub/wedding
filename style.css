@@ -296,10 +296,11 @@ img { max-width: 100%; height: auto; }
 
 /* Адаптив для телефонов */
 @media (max-width: 768px) {
-    body {
-        padding-bottom: env(safe-area-inset-bottom);
-        padding-top: env(safe-area-inset-top);
-        background: none!important;
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        overscroll-behavior-x: none;
+        background-color: #0b0c10 !important;
     }
 
     body::before {
