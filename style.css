@@ -1,6 +1,7 @@
 :root { --line-color: #ccc; --dot-color: #333; }
 
 body{
+    background-color: #0b0c10 !important;
     background-attachment: fixed;
     background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
     background-repeat: no-repeat;
@@ -310,7 +311,7 @@ img { max-width: 100%; height: auto; }
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: -1;
+        /*z-index: -1;*/
         background-image: url('https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png');
         background-repeat: no-repeat;
         background-size: cover;
