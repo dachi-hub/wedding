@@ -10,6 +10,7 @@ body{
     font-style: normal;
     height: 100%;
     gap: 50px;
+    background-color: #d1d1d1;
 }
 
 .wrapper{
@@ -128,7 +129,7 @@ body{
     padding: 20px 40px;
     box-sizing: border-box;
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    transition: all 1.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
 
 .timeline li:nth-child(odd) {
@@ -293,17 +294,17 @@ img { max-width: 100%; height: auto; }
         max-width: 100%;
         overflow-x: hidden;
         overscroll-behavior-x: none;
+        min-height: 100dvh;
     }
 
     body{
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
         background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
         background-repeat: no-repeat;
         background-position: center;
-        background-attachment: fixed;
-    }
-
-    header{
-        padding-top: 20px;
+        background-size: cover;
+        background-color: #d1d1d1;
     }
 
     .wrapper{
