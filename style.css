@@ -294,16 +294,12 @@ img { max-width: 100%; height: auto; }
         max-width: 100%;
         overflow-x: hidden;
         overscroll-behavior-x: none;
-        min-height: 100dvh;
     }
 
     body{
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
         background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
         background-color: #d1d1d1;
     }
 
@@ -335,6 +331,11 @@ img { max-width: 100%; height: auto; }
     .calendar td {
         padding: 12px 0;
         font-size: 18px;
+    }
+
+    .heart-day::after{
+        right: 1px;
+        bottom: 8px;
     }
 
     .countdown {
