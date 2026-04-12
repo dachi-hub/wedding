@@ -15,11 +15,7 @@ form.addEventListener('submit', (e) => {
     const keys = [...new Set(formData.keys())];
 
     keys.forEach(key => {
-        // Получаем ВСЕ выбранные значения для этого имени (массив)
         const values = formData.getAll(key);
-
-        // Склеиваем их через запятую и записываем в параметры
-        // Если значение одно — оно просто запишется без запятой
         params.set(key, values.join(', '));
     });
 
