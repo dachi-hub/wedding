@@ -300,26 +300,14 @@ img { max-width: 100%; height: auto; }
         margin: 0;
         padding: 0;
         background-color: #d1d1d1;
-        background-attachment: fixed;
-        inset: 0;
+        min-height: 100dvh;
         width: 100%;
-        height: 100vh;
+        background-attachment: fixed;
         background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
-
-    /*body::before{*/
-    /*    content: "";*/
-    /*    position: absolute;*/
-    /*    inset: 0;*/
-    /*    width: 100%;*/
-    /*    height: 100vh;*/
-    /*    background-image: url("https://png.klev.club/uploads/posts/2024-05/png-klev-club-aie9-p-glyantsevaya-poverkhnost-png-4.png");*/
-    /*    background-repeat: no-repeat;*/
-    /*    background-position: center;*/
-    /*    background-size: cover;*/
-    /*    pointer-events: none;*/
-    /*    z-index: -1;*/
-    /*}*/
 
     .wrapper{
         border: none;
@@ -327,17 +315,14 @@ img { max-width: 100%; height: auto; }
 
     .calendar-container {
         width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0 5px;
-        box-sizing: border-box;
+        max-width: 300px;
+        table-layout: fixed;
+        border-collapse: collapse;
     }
 
     .calendar {
-        width: 100%;
-        max-width: 365px;
-        table-layout: fixed;
-        border-collapse: collapse;
+        padding: 10px 0;
+        font-size: 16px;
     }
 
     .calendar th {
@@ -347,23 +332,31 @@ img { max-width: 100%; height: auto; }
     }
 
     .calendar td {
-        padding: 12px 0;
-        font-size: 18px;
+        padding: 10px 0;
+        font-size: 16px;
     }
 
     .heart-day::after{
-        right: 1px;
-        bottom: 8px;
+        right: 0;
+        bottom: 5px;
+        transform: scale(0.8);
     }
 
-    .countdown {
-       span{font-size: 35px}
+    .countdown span{
+        font-size: 30px;
+        line-height: 1.2;
     }
     .bottom-wrapper{
         margin: 20px;
+        text-align: center;
     }
-    h1 { margin-bottom: 5px; font-size: 25px }
-    h3{font-size: 20px}
-    p{font-size: 18px}
-    img { max-width: 100%; height: auto; }
+    h1 { margin-bottom: 10px; font-size: 24px; line-height: 1.2; }
+    h3{font-size: 18px; margin-bottom: 8px;}
+    p{font-size: 16px; line-height: 1.5;}
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
 }
