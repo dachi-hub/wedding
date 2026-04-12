@@ -11,16 +11,20 @@ form.addEventListener('submit', (e) => {
 
     const formData = new FormData(form);
     const params = new URLSearchParams();
-    const multiValueFields = ['drink', 'food'];
 
-    for (const key of formData.keys()) {
-        if (multiValueFields.includes(key)) {
-            const values = formData.getAll(key).join(', ');
-            params.set(key, values);
-        } else if (!params.has(key)) {
-            params.set(key, formData.get(key));
-        }
-    }
+    const keys = [...new Set(formData.keys())];
+
+    keys.forEach(key => {
+        // Получаем ВСЕ выбранные значения для этого имени (массив)
+        const values = formData.getAll(key);
+
+        // Склеиваем их через запятую и записываем в параметры
+        // Если значение одно — оно просто запишется без запятой
+        params.set(key, values.join(', '));
+    });
+
+    console.log('Итоговая строка:', params.toString());
+
     fetch(WEB_APP_URL, {
         method: 'POST',
         mode: 'no-cors',
